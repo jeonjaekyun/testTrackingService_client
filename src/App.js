@@ -31,12 +31,14 @@ function App() {
 
   const dataSource = () => {
     let data = [];
+    
     TrackingDetails.map((value, index) => {
-      data.push({
+      return data.push({
         key: index, timeString: value.timeString,
         where: value.where, kind: value.kind
       });
     });
+
     return data;
   }
 
