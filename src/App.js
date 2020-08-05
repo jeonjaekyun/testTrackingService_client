@@ -8,10 +8,6 @@ import {
 } from 'antd';
 const { Option } = Select;
 
-axios.create({
-  baseURL:'https://jjktrackingservice.herokuapp.com/'
-});
-
 function App() {
 
   const [Tcode, setTcode] = useState('');
