@@ -1,1 +1,1 @@
-/api/*  https://jjktrackingservice.herokuapp.com/:splat
+/api/*  https://jjktrackingservice.herokuapp.com/api/:splat
