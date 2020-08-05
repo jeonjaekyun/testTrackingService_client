@@ -1,1 +1,1 @@
-/api/*  https://jjktrackingservice.herokuapp.com/  200
+/api/*  https://jjktrackingservice.herokuapp.com/:splat  200
