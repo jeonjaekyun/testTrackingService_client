@@ -17,15 +17,18 @@ function App() {
   const columns = [
     {
       title: '시간',
-      dataIndex: 'timeString'
+      dataIndex: 'timeString',
+      width:120
     },
     {
       title: '현재위치',
-      dataIndex: 'where'
+      dataIndex: 'where',
+      width:110
     },
     {
       title: '배송상태',
-      dataIndex: 'kind'
+      dataIndex: 'kind',
+      width:220
     }
   ];
 
@@ -70,7 +73,7 @@ function App() {
 
   return (
     <div style={{ width: '100%', margin: '0' }}>
-      <div style={{ width: '550px', margin: 'auto' }}>
+      <div style={{ width: '450px', margin: 'auto' }}>
         <div style={{ marginTop: '100px' }}>
           <h1>택배 배송 조회</h1>
         </div>
@@ -85,7 +88,7 @@ function App() {
               </Select>
             </Col>
             <Col>
-              <Input size="large" style={{ width: 300 }} placeholder="운송장 번호" onChange={handleInput} />
+              <Input size="large" style={{ width: 200 }} placeholder="운송장 번호" onChange={handleInput} />
             </Col>
             <Col>
               <Button type="primary" size="large" onClick={onSubmit}>조회</Button>
