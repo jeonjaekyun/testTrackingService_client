@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import "antd/dist/antd.css";
+import {CarOutlined, InboxOutlined, HomeOutlined} from '@ant-design/icons';
 import axios from 'axios';
 import {
   Input, Button, Select,
@@ -42,6 +43,7 @@ function App() {
       });
     });
 
+    data.reverse();
     return data;
   }
 
@@ -98,6 +100,28 @@ function App() {
         <div>
           <br />
           <h2>배송 현황</h2>
+          <div style={{display:'flex', textAlign:'center'}}>
+            <div>
+              <InboxOutlined style={{fontSize:'24px'}}/><br/>
+              상품인수
+            </div>
+            <div>
+              <InboxOutlined/>
+              상품인수
+            </div>
+            <div>
+              <InboxOutlined/>
+              상품인수
+            </div>
+            <div>
+              <InboxOutlined/>
+              상품인수
+            </div>
+            <div>
+              <InboxOutlined/>
+              상품인수
+            </div>
+          </div>
           <Table
             columns={columns}
             dataSource={dataSource()}
