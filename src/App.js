@@ -67,12 +67,19 @@ function App() {
           console.log(response.data.trackingInfo.level);
           console.log(response.data.trackingInfo.trackingDetails);
           setTrackingDetails(response.data.trackingInfo.trackingDetails);
+          resetImage();
           let level = String(response.data.trackingInfo.level);
           document.getElementById(`level${level}`).style.color = 'lightgreen';
         } else {
           alert(response.data.msg);
         }
       })
+  }
+  
+  const resetImage = () => {
+    for(let i=1; i<=6;i++){
+      document.getElementById(`level${i}`).style.color = 'black';
+    }
   }
 
 
