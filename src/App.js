@@ -71,6 +71,7 @@ function App() {
           let level = String(response.data.trackingInfo.level);
           document.getElementById(`level${level}`).style.color = 'lightgreen';
         } else {
+          resetImage();
           alert(response.data.msg);
         }
       })
