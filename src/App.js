@@ -72,6 +72,7 @@ function App() {
           document.getElementById(`level${level}`).style.color = 'lightgreen';
         } else {
           resetImage();
+          setTrackingDetails([]);
           alert(response.data.msg);
         }
       })
