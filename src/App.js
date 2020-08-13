@@ -11,7 +11,7 @@ const { Option } = Select;
 
 function App() {
 
-  const [Tcode, setTcode] = useState('');
+  const [Tcode, setTcode] = useState(0);
   const [Tinvoice, setTinvoice] = useState('');
   const [TrackingDetails, setTrackingDetails] = useState([]);
 
@@ -52,6 +52,7 @@ function App() {
   }
 
   const handleInput = (event) => {
+    removeString(event);
     setTinvoice(event.target.value);
   }
 
@@ -84,6 +85,9 @@ function App() {
     }
   }
 
+  const removeString = (event) => {
+    event.target.value=event.target.value.replace(/[^0-9]/g,'');
+  }
 
   return (
     <div style={{ width: '100%', margin: '0' }}>
@@ -102,7 +106,8 @@ function App() {
               </Select>
             </Col>
             <Col>
-              <Input size="large" style={{ width: 200 }} placeholder="운송장 번호" onChange={handleInput} />
+              <Input size="large" style={{ width: 200 }}
+                placeholder="운송장 번호" onChange={handleInput} />
             </Col>
             <Col>
               <Button type="primary" size="large" onClick={onSubmit}>조회</Button>
